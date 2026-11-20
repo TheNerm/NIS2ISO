@@ -1,0 +1,63 @@
+PREFIX ext:  <http://www.hcw.ac.at/nis2iso#>
+PREFIX nis2: <http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+
+SELECT DISTINCT
+    ?organisation
+    ?control
+    ?adoption
+    ?implementation
+    ?implementationStatus
+WHERE {
+    VALUES ?organisation { ext:ExampleOrg }
+
+    ?control rdf:type/rdfs:subClassOf* ext:ISOControlDefinition .
+
+    OPTIONAL {
+        ?organisation nis2:include ?implementation .
+
+        {
+            ?implementation ext:implementControlDefinition ?control .
+        }
+        UNION
+        {
+            ?implementation rdf:type/rdfs:subClassOf* ?implementationClass .
+
+            ?implementationClass
+                owl:equivalentClass/owl:intersectionOf/rdf:rest*/rdf:first
+                ?restriction .
+
+            ?restriction
+                owl:onProperty ext:implementControlDefinition ;
+                owl:hasValue ?control .
+        }
+    }
+
+    BIND(
+        EXISTS { ?organisation ext:adapt ?control }
+        AS ?explicitAdoption
+    )
+
+    FILTER(?explicitAdoption || BOUND(?implementation))
+
+    BIND(
+        IF(
+            ?explicitAdoption,
+            "Recorded adapt relation",
+            "Derived through include and implementation"
+        )
+        AS ?adoption
+    )
+
+    BIND(
+        IF(
+            BOUND(?implementation),
+            "Implementation identified",
+            "No implementation identified"
+        )
+        AS ?implementationStatus
+    )
+}
+ORDER BY ?organisation ?control ?implementation

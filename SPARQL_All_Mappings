@@ -1,0 +1,56 @@
+PREFIX ext:  <http://www.hcw.ac.at/nis2iso#>
+PREFIX nis2: <http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+
+SELECT DISTINCT ?source ?target ?correspondence ?direction
+WHERE {
+    VALUES (?relation ?correspondence) {
+        (rdfs:subClassOf       "Full (class inclusion)")
+        (ext:partiallyFulfills "Partial (annotation)")
+    }
+
+    ?source ?relation ?target .
+
+    FILTER(isIRI(?source) && isIRI(?target))
+
+    FILTER(
+        (
+            REGEX(
+                STR(?source),
+                "^http://www[.]hcw[.]ac[.]at/nis2iso#ISO(ControlImplementation_|ControlDefinition_|RequirementClause)"
+            )
+            &&
+            REGEX(
+                STR(?target),
+                "^http://www[.]unict[.]it/nas-inf/nis2onto/nis2onto[.]owl#"
+            )
+        )
+        ||
+        (
+            REGEX(
+                STR(?source),
+                "^http://www[.]unict[.]it/nas-inf/nis2onto/nis2onto[.]owl#"
+            )
+            &&
+            REGEX(
+                STR(?target),
+                "^http://www[.]hcw[.]ac[.]at/nis2iso#ISO(ControlImplementation_|ControlDefinition_|RequirementClause)"
+            )
+        )
+    )
+
+    BIND(
+        IF(
+            REGEX(
+                STR(?source),
+                "^http://www[.]unict[.]it/nas-inf/nis2onto/nis2onto[.]owl#"
+            ),
+            "NIS2 -> ISO",
+            "ISO -> NIS2"
+        )
+        AS ?direction
+    )
+}
+ORDER BY ?direction ?source ?target
