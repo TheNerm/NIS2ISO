@@ -18,6 +18,61 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#partiallyFulfills -->
+
+    <owl:AnnotationProperty rdf:about="http://www.hcw.ac.at/nis2iso#partiallyFulfills"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#adapt -->
+
+    <owl:ObjectProperty rdf:about="http://www.hcw.ac.at/nis2iso#adapt">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#include"/>
+            <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#implementControlDefinition -->
+
+    <owl:ObjectProperty rdf:about="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+    
+
+
+    <!-- http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#include -->
+
+    <rdf:Description rdf:about="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#include">
+        <rdfs:subPropertyOf rdf:resource="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#take"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#takeIntoAccount"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -26,11 +81,3608 @@
     
 
 
+    <!-- http://www.hcw.ac.at/nis2iso#CompliantISOEntity -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#CompliantISOEntity">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#include"/>
+                        <owl:someValuesFrom rdf:resource="http://www.hcw.ac.at/nis2iso#ISORequirementClause10"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#include"/>
+                        <owl:someValuesFrom rdf:resource="http://www.hcw.ac.at/nis2iso#ISORequirementClause4"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#include"/>
+                        <owl:someValuesFrom rdf:resource="http://www.hcw.ac.at/nis2iso#ISORequirementClause5"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#include"/>
+                        <owl:someValuesFrom rdf:resource="http://www.hcw.ac.at/nis2iso#ISORequirementClause6"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#include"/>
+                        <owl:someValuesFrom rdf:resource="http://www.hcw.ac.at/nis2iso#ISORequirementClause7"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#include"/>
+                        <owl:someValuesFrom rdf:resource="http://www.hcw.ac.at/nis2iso#ISORequirementClause8"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#include"/>
+                        <owl:someValuesFrom rdf:resource="http://www.hcw.ac.at/nis2iso#ISORequirementClause9"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOEntity"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.hcw.ac.at/nis2iso#ExampleSecurityMeasure -->
 
     <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ExampleSecurityMeasure">
         <rdfs:subClassOf rdf:resource="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#CybersecurityRiskManagementMeasure"/>
     </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_1 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_1">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_10 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_10">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_11 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_11">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_12 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_12">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_13 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_13">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_14 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_14">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_15 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_15">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_16 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_16">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_17 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_17">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_18 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_18">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_19 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_19">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_2 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_2">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_20 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_20">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_21 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_21">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_22 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_22">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_23 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_23">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_24 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_24">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_25 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_25">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_26 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_26">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_27 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_27">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_28 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_28">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_29 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_29">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_3 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_3">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_30 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_30">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_31 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_31">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_32 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_32">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_33 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_33">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_34 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_34">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_35 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_35">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_36 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_36">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_37 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_37">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_4 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_4">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_5 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_5">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_6 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_6">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_7 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_7">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_8 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_8">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_9 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_9">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_1 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_1">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_2 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_2">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_3 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_3">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_4 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_4">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_5 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_5">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_6 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_6">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_7 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_7">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_8 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_8">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_1 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_1">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_10 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_10">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_11 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_11">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_12 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_12">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_13 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_13">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_14 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_14">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_2 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_2">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_3 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_3">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_4 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_4">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_5 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_5">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_6 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_6">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_7 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_7">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_8 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_8">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_9 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_9">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_1 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_1">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_10 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_10">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_11 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_11">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_12 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_12">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_13 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_13">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_14 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_14">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_15 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_15">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_16 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_16">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_17 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_17">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_18 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_18">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_19 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_19">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_2 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_2">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_20 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_20">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_21 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_21">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_22 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_22">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_23 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_23">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_24 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_24">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_25 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_25">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_26 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_26">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_27 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_27">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_28 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_28">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_29 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_29">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_3 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_3">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_30 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_30">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_31 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_31">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_32 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_32">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_33 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_33">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_34 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_34">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_4 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_4">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_5 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_5">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_6 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_6">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_7 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_7">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_8 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_8">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_9 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_9">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                <owl:someValuesFrom rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_1 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_1">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_1"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_10 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_10">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_10"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_11 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_11">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_11"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_12 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_12">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_12"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_13 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_13">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_13"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_14 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_14">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_14"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_15 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_15">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_15"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_16 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_16">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_16"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_17 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_17">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_17"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_18 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_18">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_18"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_19 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_19">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_19"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_2 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_2">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_2"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_20 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_20">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_20"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_21 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_21">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_21"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_22 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_22">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_22"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_23 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_23">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_23"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_24 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_24">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_24"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+        <ext:partiallyFulfills rdf:resource="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#AssetManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_25 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_25">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_25"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_26 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_26">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_26"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_27 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_27">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_27"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_28 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_28">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_28"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_29 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_29">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_29"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_3 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_3">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_3"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_30 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_30">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_30"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_31 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_31">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_31"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_32 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_32">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_32"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_33 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_33">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_33"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_34 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_34">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_34"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_35 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_35">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_35"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_36 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_36">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_36"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_37 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_37">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_37"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_4 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_4">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_4"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_5 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_5">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_5"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_6 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_6">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_6"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_7 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_7">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_7"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_8 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_8">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_8"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_9 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_9">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_9"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_6_1 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_6_1">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_1"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_6_2 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_6_2">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_2"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_6_3 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_6_3">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_3"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_6_4 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_6_4">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_4"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_6_5 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_6_5">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_5"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_6_6 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_6_6">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_6"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_6_7 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_6_7">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_7"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_6_8 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_6_8">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_8"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_7_1 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_7_1">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_1"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_7_10 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_7_10">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_10"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_7_11 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_7_11">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_11"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_7_12 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_7_12">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_12"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_7_13 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_7_13">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_13"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_7_14 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_7_14">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_14"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_7_2 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_7_2">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_2"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_7_3 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_7_3">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_3"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_7_4 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_7_4">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_4"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_7_5 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_7_5">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_5"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_7_6 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_7_6">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_6"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_7_7 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_7_7">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_7"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_7_8 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_7_8">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_8"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_7_9 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_7_9">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_9"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_1 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_1">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_1"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_10 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_10">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_10"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_11 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_11">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_11"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_12 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_12">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_12"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_13 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_13">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_13"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#BackupManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_14 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_14">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_14"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_15 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_15">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_15"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_16 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_16">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_16"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_17 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_17">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_17"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_18 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_18">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_18"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_19 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_19">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_19"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_2 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_2">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_2"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_20 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_20">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_20"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_21 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_21">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_21"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_22 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_22">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_22"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_23 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_23">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_23"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_24 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_24">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_24"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+        <rdfs:subClassOf rdf:resource="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#CryptographyUsePolicy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_25 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_25">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_25"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_26 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_26">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_26"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_27 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_27">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_27"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_28 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_28">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_28"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_29 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_29">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_29"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_3 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_3">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_3"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_30 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_30">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_30"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_31 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_31">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_31"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_32 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_32">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_32"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_33 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_33">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_33"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_34 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_34">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_34"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_4 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_4">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_4"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_5 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_5">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_5"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_6 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_6">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_6"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_7 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_7">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_7"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_8 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_8">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_8"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_9 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_9">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#implementControlDefinition"/>
+                        <owl:hasValue rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_9"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOEntity -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISOEntity">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.hcw.ac.at/nis2iso#adapt"/>
+                <owl:someValuesFrom rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#include"/>
+                <owl:someValuesFrom rdf:resource="http://www.hcw.ac.at/nis2iso#ISORequirementImplementation"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISORequirementClause10 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISORequirementClause10">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISORequirementImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISORequirementClause4 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISORequirementClause4">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISORequirementImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISORequirementClause5 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISORequirementClause5">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISORequirementImplementation"/>
+        <rdfs:subClassOf rdf:resource="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#InformationSystemSecurityPolicy"/>
+        <ext:partiallyFulfills rdf:resource="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#RisksOrganisationalMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISORequirementClause6 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISORequirementClause6">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISORequirementImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISORequirementClause7 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISORequirementClause7">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISORequirementImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISORequirementClause8 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISORequirementClause8">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISORequirementImplementation"/>
+        <ext:partiallyFulfills rdf:resource="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#RisksOrganisationalMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISORequirementClause9 -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISORequirementClause9">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISORequirementImplementation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISORequirementImplementation -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#ISORequirementImplementation"/>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#IncidentImpactMinimisation -->
+
+    <owl:Class rdf:about="http://www.hcw.ac.at/nis2iso#IncidentImpactMinimisation">
+        <rdfs:subClassOf rdf:resource="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#AssetManagement -->
+
+    <rdf:Description rdf:about="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#AssetManagement">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_24"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#BackupManagement -->
+
+    <rdf:Description rdf:about="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#BackupManagement">
+        <rdfs:subClassOf rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_13"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#CryptographyUsePolicy -->
+
+    <rdf:Description rdf:about="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#CryptographyUsePolicy">
+        <ext:partiallyFulfills rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_24"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#InformationSystemSecurityPolicy -->
+
+    <rdf:Description rdf:about="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#InformationSystemSecurityPolicy">
+        <ext:partiallyFulfills rdf:resource="http://www.hcw.ac.at/nis2iso#ISORequirementClause5"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#Clause10Imp -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#Clause10Imp">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISORequirementClause10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#Clause4Imp -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#Clause4Imp">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISORequirementClause4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#Clause5Imp -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#Clause5Imp">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISORequirementClause5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#Clause6Imp -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#Clause6Imp">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISORequirementClause6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#Clause7Imp -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#Clause7Imp">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISORequirementClause7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#Clause8Imp -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#Clause8Imp">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISORequirementClause8"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#Clause9Imp -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#Clause9Imp">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISORequirementClause9"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ControlImplementation_8_24 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ControlImplementation_8_24">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_8_24"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ExampleOrg -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ExampleOrg">
+        <ext:adapt rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_1"/>
+        <nis2:include rdf:resource="http://www.hcw.ac.at/nis2iso#Clause10Imp"/>
+        <nis2:include rdf:resource="http://www.hcw.ac.at/nis2iso#Clause4Imp"/>
+        <nis2:include rdf:resource="http://www.hcw.ac.at/nis2iso#Clause5Imp"/>
+        <nis2:include rdf:resource="http://www.hcw.ac.at/nis2iso#Clause6Imp"/>
+        <nis2:include rdf:resource="http://www.hcw.ac.at/nis2iso#Clause7Imp"/>
+        <nis2:include rdf:resource="http://www.hcw.ac.at/nis2iso#Clause8Imp"/>
+        <nis2:include rdf:resource="http://www.hcw.ac.at/nis2iso#Clause9Imp"/>
+        <nis2:include rdf:resource="http://www.hcw.ac.at/nis2iso#ControlImplementation_8_24"/>
+        <nis2:include rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_1"/>
+        <nis2:include rdf:resource="http://www.hcw.ac.at/nis2iso#NIS2BackupManagement"/>
+        <nis2:include rdf:resource="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#AssetManagement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_1">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_10">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_11">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_11"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_12">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_12"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_13">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_13"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_14">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_14"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_15">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_15"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_16">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_16"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_17">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_17"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_18 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_18">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_18"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_19 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_19">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_19"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_2">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_20">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_20"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_21 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_21">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_21"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_22 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_22">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_22"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_23 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_23">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_23"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_24 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_24">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_24"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_25 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_25">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_25"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_26 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_26">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_26"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_27 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_27">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_27"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_28 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_28">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_28"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_29 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_29">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_29"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_3">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_30 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_30">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_30"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_31 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_31">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_31"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_32 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_32">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_32"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_33 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_33">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_33"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_34 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_34">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_34"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_35 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_35">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_35"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_36 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_36">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_36"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_37 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_37">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_37"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_4">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_5">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_6">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_7">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_8">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_8"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_9">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_5_9"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_1">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_2">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_3">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_4">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_5">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_6">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_7">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_8">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_6_8"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_1">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_10">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_11">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_11"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_12">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_12"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_13">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_13"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_14">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_14"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_2">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_3">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_4">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_5">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_6">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_7">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_8">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_8"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_9">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_7_9"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_1">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_10">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_11">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_11"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_12">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_12"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_13">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_13"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_14">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_14"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_15">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_15"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_16">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_16"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_17">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_17"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_18 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_18">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_18"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_19 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_19">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_19"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_2">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_20">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_20"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_21 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_21">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_21"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_22 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_22">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_22"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_23 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_23">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_23"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_24 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_24">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_24"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_25 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_25">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_25"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_26 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_26">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_26"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_27 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_27">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_27"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_28 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_28">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_28"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_29 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_29">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_29"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_3">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_30 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_30">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_30"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_31 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_31">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_31"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_32 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_32">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_32"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_33 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_33">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_33"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_34 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_34">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_34"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_4">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_5">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_6">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_7">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_8">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_8"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_9">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlDefinition_8_9"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_1">
+        <rdf:type rdf:resource="http://www.hcw.ac.at/nis2iso#ISOControlImplementation_5_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.hcw.ac.at/nis2iso#NIS2BackupManagement -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcw.ac.at/nis2iso#NIS2BackupManagement">
+        <rdf:type rdf:resource="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#BackupManagement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#CompliantOrganisation -->
+
+    <rdf:Description rdf:about="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#CompliantOrganisation">
+        <nis2:include rdf:resource="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#AccessControlPolicy"/>
+        <nis2:include rdf:resource="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#BackupManagement"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#RisksOrganisationalMeasure">
+        <ext:partiallyFulfills rdf:resource="http://www.hcw.ac.at/nis2iso#ISORequirementClause5"/>
+        <ext:partiallyFulfills rdf:resource="http://www.hcw.ac.at/nis2iso#ISORequirementClause8"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#include"/>
+        <owl:someValuesFrom rdf:resource="http://www.hcw.ac.at/nis2iso#IncidentImpactMinimisation"/>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#minimise"/>
+                <owl:someValuesFrom rdf:resource="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#IncidentImpact"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Restriction>
 </rdf:RDF>
 
 
